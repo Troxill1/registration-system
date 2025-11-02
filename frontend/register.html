@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration</title>
+
+    <link rel="stylesheet" href="styles/registerLogin.css">
+</head>
+<body>
+    <div>
+        <form id="registration-form" method="POST">
+            <h1>Registration</h1>
+
+            <label for="first-name">First name</label>
+            <input id="first-name" name="first-name" type="text" placeholder="John">
+
+            <label for="last-name">Last name</label>
+            <input id="last-name" name="last-name" type="text" placeholder="Doe">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="john@mail.com">
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="StrongPass7">
+
+            <label for="confirm-password">Confirm password</label>
+            <input id="confirm-password" name="confirm-password" type="password">
+
+            <button>Register</button>
+            <p>Have an account? <a href="/">Log in</a></p>
+            <p id="notification"></p>
+        </form>
+
+        <form id="captcha-form" class="captcha" hidden>
+            <h2>Captcha</h2>
+
+            <label for="captcha-display" class="captcha">Enter the following text</label>
+            <div class="captcha">
+                <input id="captcha-display" class="captcha" type="text" readonly>
+                <button id="captcha-button" class="captcha" type="button">New</button>
+            </div>
+            
+            <label for="captcha-input" class="captcha">Your input</label>
+            <input id="captcha-input" class="captcha" type="text">
+
+            <p id="captcha-notification"></p>
+        </form>
+    </div>
+
+    <script src="/scripts/logout.js"></script>
+    <script type="module" src="/scripts/authenticator.js"></script>
+</body>
+</html>

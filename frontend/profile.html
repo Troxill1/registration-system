@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-container">
+            <li class="nav-item">
+                <a href="/home.html">Home</a>
+            </li>
+            <li class="nav-item current-page">
+                <a href="/profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a href="/">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div>
+            <h1>Profile settings</h1>
+
+            <div class="item">
+                <label for="email">Email:</label>
+                <p id="email"></p>
+            </div>
+            
+            <div class="item">
+                <label for="first-name">First name:</label>
+                <p id="first-name" name="first-name"></p>
+            </div>
+            
+            <div class="item">
+                <label for="last-name">Last name:</label>
+                <p id="last-name" name="last-name"></p>
+            </div>
+
+            <button id="name-button">Edit name</button>
+            <button id="password-button">Change password</button>
+        </div>
+
+        <form id="name-form" method="PATCH" hidden>
+            <label for="first-name-input">First name</label>
+            <input id="first-name-input" name="first-name-input" type="text" value="">
+
+            <label for="last-name-input">Last name</label>
+            <input id="last-name-input" name="last-name-input" type="text" value="">
+
+            <button>Update</button>
+        </form>
+
+        <form id="password-form" method="PATCH" hidden>
+            <label for="password-input">Current password</label>
+            <input id="password-input" name="password-input" type="password" value="">
+
+            <label for="new-password-input">New password</label>
+            <input id="new-password-input" name="new-password-input" type="password" value="">
+
+            <button>Update</button>
+        </form>
+
+        <p id="notification"></p>
+    </div>
+
+    <script src="/scripts/protectPage.js"></script>
+    <script src="/scripts/getUser.js"></script>
+    <script src="/scripts/updateUser.js"></script>
+</body>
+</html>
